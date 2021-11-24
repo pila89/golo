@@ -1,0 +1,14 @@
+ALGORITHM tri
+VAR
+    i,j,x : INTEGER;
+BEGIN
+    FOR i FROM 1 TO arr.length-1 DO
+        x := arr [i];
+        j := i-1;
+        WHILE (j >= 0 AND arr[j] > x) DO
+            arr[j+1] := arr[j];
+            j := j-1;
+        END WHILE
+        arr[j+1] = x;
+    END FOR
+END
